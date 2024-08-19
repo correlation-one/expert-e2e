@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
 const { login } = require('../utils/login');
 
-test('Add fellow update and interaction', async ({ page }) => {
-  console.log('Starting test: Add fellow update and interaction');
+test('Creating a 1:1 interactions for a fellow', async ({ page }) => {
+  console.log('Starting test');
 
   // Navigate to the website
   await page.goto('/');
