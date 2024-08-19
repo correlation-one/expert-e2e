@@ -10,7 +10,7 @@ module.exports = defineConfig({
   reporter: [['line'], ['allure-playwright']],
   use: {
     baseURL: 'https://expert.correlation-one.com/',
-    headless: true,
+    headless: false,
     //slowMo: 1000,  // Slows down Playwright operations by 1000ms
     // trace: 'on-first-retry', //Enables trace collection on the first retry of a failed test.
   },
