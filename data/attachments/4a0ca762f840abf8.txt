@@ -1,0 +1,12 @@
+Starting test
+Navigated to homepage
+Title verified
+Email field filled
+Password field filled
+Submit button clicked
+Navigation completed
+Page title after login: Expert Client
+Login Successful
+Assertion passed: Engineer Test gridcell is visible and clicked.
+Assertion passed: Interactions label is visible and clicked.
+Assertion passed: Status label inside fellow drawer is visible and clicked.
