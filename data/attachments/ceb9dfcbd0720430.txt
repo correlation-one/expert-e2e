@@ -1,0 +1,21 @@
+Starting test: Add fellow update and interaction
+Navigated to homepage
+Title verified
+Email field filled
+Password field filled
+Submit button clicked
+Navigation completed
+Page title after login: Expert Client
+Login Successful
+Clicked on Add fellow update button
+Selected fellow: Engineer Test
+Clicked Next button
+Navigated to Job search status
+Current status is "Not looking". Clicked on Applying.
+Clicked Next button
+Success message appeared.
+Verified success heading is displayed
+Verified success message is displayed
+Verified "Add more updates" button is present
+Verified "Start a new fellow update" button is present
+Test completed successfully
