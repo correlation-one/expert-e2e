@@ -1,2 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","17901","Access to the list of fellows associated to my programs","chromium","Mon Aug 19 18:25:01 UTC 2024","passed","Mon Aug 19 18:25:19 UTC 2024","","Access-list.test.js","",""
+"","7","Access to the list of fellows associated to my programs","chromium","Mon Aug 19 20:28:40 UTC 2024","failed","Mon Aug 19 20:28:40 UTC 2024","","Access-list.test.js","",""
+"","7","Add fellow update and interaction","chromium","Mon Aug 19 20:28:39 UTC 2024","failed","Mon Aug 19 20:28:39 UTC 2024","","1on1-interactions.test.js","",""
+"","7","Engagement status","chromium","Mon Aug 19 20:28:43 UTC 2024","failed","Mon Aug 19 20:28:43 UTC 2024","","Eng-status.test.js","",""
+"","6","Engagement status","chromium","Mon Aug 19 20:28:44 UTC 2024","failed","Mon Aug 19 20:28:44 UTC 2024","","Job-update.test.js","",""
