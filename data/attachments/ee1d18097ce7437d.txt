@@ -1,6 +1,0 @@
-Starting test
-Navigated to homepage
-Title verified
-Email field filled
-Password field filled
-Submit button clicked
