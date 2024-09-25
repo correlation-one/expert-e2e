@@ -1,0 +1,23 @@
+Starting test
+Navigated to homepage
+Title verified
+Email field filled
+Password field filled
+Submit button clicked
+Navigation completed
+Page title after login: Expert Client
+Login Successful
+Clicked on Add fellow update button
+Selected fellow: Engineer Test
+Proceeded to next step
+Clicked on Engagement status
+Selected status: On track
+Clicked Next button
+Filled text field with "Test"
+Selected "No" option
+Clicked Submit button
+Verified success heading is displayed with correct text
+Verified success message is displayed with correct text
+Verified "Add more updates" button is present
+Verified "Start a new fellow update" button is present
+Test completed successfully
