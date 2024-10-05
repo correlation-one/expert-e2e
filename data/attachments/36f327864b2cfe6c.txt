@@ -11,7 +11,7 @@ Clicked on Add fellow update button
 Selected fellow: Engineer Test
 Proceeded to next step
 Clicked on Engagement status
-Selected status: At risk
+Selected status: On track
 Clicked Next button
 Filled text field with "Test"
 Selected "No" option
