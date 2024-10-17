@@ -1,0 +1,18 @@
+Starting test
+Navigated to homepage
+Title verified
+Email field filled
+Password field filled
+Submit button clicked
+Navigation completed
+Page title after login: Expert Client
+Login Successful
+Clicked on Add fellow update button
+Selected fellow: Engineer Test
+Proceeded to next step
+Selected interaction type: Slack/Email
+Proceeded to interaction details
+Filled interaction details
+Selected interaction topic: Introduction
+Selected No for follow-up
+Submitted the interaction

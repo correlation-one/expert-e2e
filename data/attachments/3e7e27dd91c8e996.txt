@@ -16,8 +16,3 @@ Filled interaction details
 Selected interaction topic: Introduction
 Selected No for follow-up
 Submitted the interaction
-Verified success element is displayed with correct text
-Verified success message is displayed with correct text
-Verified "Add more updates" button is present
-Verified "Start a new fellow update" button is present
-Test completed successfully
