@@ -8,3 +8,8 @@ Navigation completed
 Page title after login: Expert Client
 Login Successful
 Clicked on Add fellow update button
+Selected fellow: Engineer Test
+Clicked Next button
+Navigated to Job search status
+Current status is "Not looking". Clicked on Applying.
+Clicked Next button
