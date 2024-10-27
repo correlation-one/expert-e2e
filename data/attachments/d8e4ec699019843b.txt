@@ -8,3 +8,4 @@ Navigation completed
 Page title after login: Expert Client
 Login Successful
 Navigated to Expert Test Program tab
+Entered search term: Michael Scott

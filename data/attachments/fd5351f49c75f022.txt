@@ -10,6 +10,9 @@ Login Successful
 Clicked on Add fellow update button
 Selected fellow: Engineer Test
 Proceeded to next step
-Filled textbox with generated LinkedIn link: https://www.linkedin.com/in/ur19b9b0-test-watwy5oi/
-Assertion passed: The correct link was filled in the textbox.
-Clicked Save button
+Clicked on Engagement status
+Selected status: On track
+Clicked Next button
+Filled text field with "Test"
+Selected "No" option
+Clicked Submit button
