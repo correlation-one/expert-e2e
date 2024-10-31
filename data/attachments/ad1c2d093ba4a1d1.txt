@@ -11,5 +11,5 @@ Clicked on Add fellow update button
 Selected fellow: Engineer Test
 Clicked Next button
 Navigated to Job search status
-Current status is "Not looking". Clicked on Applying.
+Current status is "Applying". Clicked on Not looking.
 Clicked Next button
