@@ -9,7 +9,10 @@ Page title after login: Expert Client
 Login Successful
 Clicked on Add fellow update button
 Selected fellow: Engineer Test
+Proceeded to next step
+Clicked on Engagement status
+Selected status: At risk
 Clicked Next button
-Navigated to Job search status
-Current status is "Applying". Clicked on Not looking.
-Clicked Next button
+Filled text field with "Test"
+Selected "No" option
+Clicked Submit button
