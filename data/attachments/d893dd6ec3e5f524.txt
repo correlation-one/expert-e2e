@@ -9,7 +9,7 @@ Page title after login: Expert Client
 Login Successful
 Clicked on Add fellow update button
 Selected fellow: Engineer Test
-Proceeded to next step
-Filled textbox with generated LinkedIn link: https://www.linkedin.com/in/egsjv6u6-test-q4luktrj/
-Assertion passed: The correct link was filled in the textbox.
-Clicked Save button
+Clicked Next button
+Navigated to Job search status
+Current status is "Not looking". Clicked on Applying.
+Clicked Next button
