@@ -1,0 +1,15 @@
+Starting test
+Navigated to homepage
+Title verified
+Email field filled
+Password field filled
+Submit button clicked
+Navigation completed
+Page title after login: Expert Client
+Login Successful
+Clicked on Add fellow update button
+Selected fellow: Engineer Test
+Proceeded to next step
+Filled textbox with generated LinkedIn link: https://www.linkedin.com/in/v5r7bsb1-test-d9gvf5lt/
+Assertion passed: The correct link was filled in the textbox.
+Clicked Save button
