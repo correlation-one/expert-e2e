@@ -4,3 +4,6 @@ Title verified
 Email field filled
 Password field filled
 Submit button clicked
+Navigation completed
+Page title after login: Expert Client
+Login Successful
