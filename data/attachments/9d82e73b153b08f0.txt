@@ -1,3 +1,0 @@
-Starting test
-Navigated to homepage
-Title verified
