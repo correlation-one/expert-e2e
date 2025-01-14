@@ -7,8 +7,8 @@ test('Review Fellow interaction History', async ({ page }) => {
   await page.goto('/');
   console.log('Navigated to homepage');
 
-  // Check if the page title contains 'Sign In with Auth0'
-  await expect(page).toHaveTitle(/Sign In with Auth0/);
+  // Check if the page title contains 'Sign in Correlation-one'
+  await expect(page).toHaveTitle(/Sign in Correlation-one/);
   console.log('Title verified');
 
   // Perform login
