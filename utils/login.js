@@ -3,10 +3,10 @@ require('dotenv').config();
 
 async function login(page) {
 
-  await page.fill('input[type="email"][name="email"]', process.env.EMAIL);
+  await page.fill('input[id="username"]', process.env.EMAIL);
   console.log('Email field filled');
 
-  await page.fill('input[type="password"][name="password"]', process.env.PASSWORD);
+  await page.fill('input[id="password"]', process.env.PASSWORD);
   console.log('Password field filled');
 
   await page.click('button[type="submit"]');
