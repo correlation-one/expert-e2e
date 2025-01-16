@@ -47,7 +47,7 @@ jobs:
         fi
 
     - name: Run Playwright Tests
-      run: npx playwright test || true
+      run: npm run test || true
       env:
         EMAIL: ${{ secrets.EMAIL }}
         PASSWORD: ${{ secrets.PASS }}
