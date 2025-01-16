@@ -7,4 +7,3 @@ Submit button clicked
 Navigation completed
 Page title after login: Expert Client
 Login Successful
-Clicked on Add fellow update button
