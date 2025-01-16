@@ -1,7 +1,10 @@
 const { test, expect } = require('@playwright/test');
 const { login } = require('../utils/login');
 
+const AllureUtils = require('../utils/allureUtils');
+
 test('Creating a 1:1 interactions for a fellow', async ({ page }) => {
+  const allureUtils = new AllureUtils(page);
   console.log('Starting test');
 
   // Navigate to the website
@@ -18,6 +21,8 @@ test('Creating a 1:1 interactions for a fellow', async ({ page }) => {
   const postLoginTitle = await page.title();
   console.log('Page title after login:', postLoginTitle);
   console.log('Login Successful');
+
+  await allureUtils.takeScreenshot();
 
   // Click on 'Add fellow update' button
   await page.getByRole('button', { name: 'Add fellow update' }).click();
