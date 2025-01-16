@@ -11,14 +11,13 @@ module.exports = defineConfig({
   use: {
     baseURL: 'https://expert.correlation-one.com/',
     headless: true,
-    screenshot: 'only-on-failure', 
     //slowMo: 1000,  // Slows down Playwright operations by 1000ms
     // trace: 'on-first-retry', //Enables trace collection on the first retry of a failed test.
   },
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'], screenshot: 'only-on-failure',  },
     },
   ],
 });
