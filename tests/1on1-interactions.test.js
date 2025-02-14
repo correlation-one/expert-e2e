@@ -28,12 +28,12 @@ test('Creating a 1:1 interactions for a learner', async ({ page }) => {
   await page.getByRole('button', { name: 'Add learner update' }).click();
   console.log('Clicked on Add learner update button');
 
-  
+
   // Search and select learner
   await page.getByPlaceholder('Search learner by name').click();
   await page.getByPlaceholder('Search learner by name').fill('');
-  await page.getByRole('option', { name: 'gabriel.deazevedo+1@correlation-one.com' }).click();
-  console.log('Selected learner: gabriel.deazevedo+1@correlation-one.com');
+  await page.getByRole('option', { name: 'gabriel.deazevedo+2@correlation-one.com' }).click();
+  console.log('Selected learner: gabriel.deazevedo+2@correlation-one.com');
 
   // Click Next
   await page.getByRole('button', { name: 'Next' }).click();
