@@ -76,7 +76,7 @@ test('Creating a 1:1 interactions for a learner', async ({ page }) => {
     // Verify the presence of the success element
     const successElement = page.locator('h4.MuiTypography-root.MuiTypography-h4');
     await expect(successElement).toBeVisible();
-    await expect(successElement).toHaveText('High-five, gabriel.deazevedo+2@correlation-one.com');
+    await expect(successElement).toHaveText('High-five, gabriel.deazevedo+1@correlation-one.com');
     console.log('Verified success element is displayed with correct text');
 
     // Verify the presence of the success message paragraph
