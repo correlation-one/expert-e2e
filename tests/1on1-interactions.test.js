@@ -28,7 +28,6 @@ test('Creating a 1:1 interactions for a learner', async ({ page }) => {
   await page.getByRole('button', { name: 'Add learner update' }).click();
   console.log('Clicked on Add learner update button');
 
-
   // Search and select learner
   await page.getByPlaceholder('Search learner by name').click();
   await page.getByPlaceholder('Search learner by name').fill('');
