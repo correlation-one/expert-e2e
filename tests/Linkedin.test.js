@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { login } = require('../utils/login');
 
-test('Fellow LinkedIn creation/update', async ({ page }) => {
+test('learner LinkedIn creation/update', async ({ page }) => {
   console.log('Starting test');
 
   // Function to generate a random string of characters
@@ -29,15 +29,15 @@ test('Fellow LinkedIn creation/update', async ({ page }) => {
   console.log('Page title after login:', postLoginTitle);
   console.log('Login Successful');
 
-  // Click on 'Add fellow update' button
-  await page.getByRole('button', { name: 'Add fellow update' }).click();
-  console.log('Clicked on Add fellow update button');
+  // Click on 'Add learner update' button
+  await page.getByRole('button', { name: 'Add learner update' }).click();
+  console.log('Clicked on Add learner update button');
 
-  // Search and select fellow
-  await page.getByPlaceholder('Search fellow by name').click();
-  await page.getByPlaceholder('Search fellow by name').fill('');
+  // Search and select learner
+  await page.getByPlaceholder('Search learner by name').click();
+  await page.getByPlaceholder('Search learner by name').fill('');
   await page.getByRole('option', { name: 'Engineer Test' }).click();
-  console.log('Selected fellow: Engineer Test');
+  console.log('Selected learner: Engineer Test');
 
   // Click Next
   await page.getByRole('button', { name: 'Next' }).click();

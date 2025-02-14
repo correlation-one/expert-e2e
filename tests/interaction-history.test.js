@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { login } = require('../utils/login');
 
-test('Review Fellow interaction History', async ({ page }) => {
+test('Review learner interaction History', async ({ page }) => {
   console.log('Starting test');
   // Navigate to the website
   await page.goto('/');
@@ -30,9 +30,9 @@ test('Review Fellow interaction History', async ({ page }) => {
   await interactionsLabel.click();
   console.log('Assertion passed: Interactions label is visible and clicked.');
 
-  // Click on 'Status' inside the fellow drawer
-  const statusLabel = page.getByTestId('fellow-drawer').getByLabel('Status');
+  // Click on 'Status' inside the learner drawer
+  const statusLabel = page.getByTestId('learner-drawer').getByLabel('Status');
   await expect(statusLabel).toBeVisible();
   await statusLabel.click();
-  console.log('Assertion passed: Status label inside fellow drawer is visible and clicked.');
+  console.log('Assertion passed: Status label inside learner drawer is visible and clicked.');
 });
