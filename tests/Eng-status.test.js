@@ -26,8 +26,8 @@ test('Creating Engagement status update', async ({ page }) => {
   // Search and select learner
   await page.getByPlaceholder('Search learner by name').click();
   await page.getByPlaceholder('Search learner by name').fill('');
-  await page.getByRole('option', { name: 'Engineer Test' }).click();
-  console.log('Selected learner: Engineer Test');
+  await page.getByRole('option', { name: 'gabriel.deazevedo+2@correlation-one.com' }).click();
+  console.log('Selected learner: gabriel.deazevedo+2@correlation-one.com');
 
   // Click Next
   await page.getByRole('button', { name: 'Next' }).click();
