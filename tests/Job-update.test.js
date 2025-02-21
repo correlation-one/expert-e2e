@@ -26,8 +26,8 @@ test('Creating Job Search status update', async ({ page }) => {
   // Search and select learner
   await page.getByPlaceholder('Search learner by name').click();
   await page.getByPlaceholder('Search learner by name').fill('');
-  await page.getByRole('option', { name: 'Engineer Test' }).click();
-  console.log('Selected learner: Engineer Test');
+  await page.getByRole('option', { name: '¨gabriel.deazevedo+2@correlation-one.com' }).click();
+  console.log('Selected learner: ¨gabriel.deazevedo+2@correlation-one.com');
 
   await page.getByRole('button', { name: 'Next' }).click();
   console.log('Clicked Next button');
@@ -39,8 +39,8 @@ test('Creating Job Search status update', async ({ page }) => {
   await page.waitForTimeout(5000);
 
   // Locate the status text on the page
-  const applyingStatus = page.locator('p:has-text("Engineer Test\'s current engagement status is Applying")');
-  const notLookingStatus = page.locator('p:has-text("Engineer Test\'s current engagement status is Not looking")');
+  const applyingStatus = page.locator('p:has-text("¨gabriel.deazevedo+2@correlation-one.com\'s current engagement status is Applying")');
+  const notLookingStatus = page.locator('p:has-text("¨gabriel.deazevedo+2@correlation-one.com\'s current engagement status is Not looking")');
 
   // Click based on the current status
   const chipLabels = page.locator("span[class*='MuiChip-label'].css-9iedg7");
