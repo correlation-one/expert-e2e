@@ -10,9 +10,6 @@ Login Successful
 Clicked on Add learner update button
 Selected learner: gabriel.deazevedo+2@correlation-one.com
 Proceeded to next step
-Clicked on Engagement status
-Selected status: On track
-Clicked Next button
-Filled text field with "Test"
-Selected "No" option
-Clicked Submit button
+Filled textbox with generated LinkedIn link: https://www.linkedin.com/in/b9yod8n0-test-xjh7j8cg/
+Assertion passed: The correct link was filled in the textbox.
+Clicked Save button
