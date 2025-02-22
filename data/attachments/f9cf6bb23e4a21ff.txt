@@ -10,6 +10,9 @@ Login Successful
 Clicked on Add learner update button
 Selected learner: gabriel.deazevedo+2@correlation-one.com
 Proceeded to next step
-Filled textbox with generated LinkedIn link: https://www.linkedin.com/in/kmkfgbl5-test-v0jzode0/
-Assertion passed: The correct link was filled in the textbox.
-Clicked Save button
+Clicked on Engagement status
+Selected status: At risk
+Clicked Next button
+Filled text field with "Test"
+Selected "No" option
+Clicked Submit button
