@@ -18,11 +18,11 @@ test('Review learner interaction History', async ({ page }) => {
   console.log('Page title after login:', postLoginTitle);
   console.log('Login Successful');
 
-  // Click on gridcell 'Engineer Test'
-  const gridCell = page.getByRole('gridcell', { name: 'Engineer Test' });
+  // Click on gridcell 'gabriel.deazevedo+2@correlation-one.com'
+  const gridCell = page.getByRole('gridcell', { name: 'gabriel.deazevedo+2@correlation-one.com' });
   await expect(gridCell).toBeVisible();
   await gridCell.click();
-  console.log('Assertion passed: Engineer Test gridcell is visible and clicked.');
+  console.log('Assertion passed: gabriel.deazevedo+2@correlation-one.com gridcell is visible and clicked.');
 
   // Click on 'Interactions'
   const interactionsLabel = page.getByLabel('Interactions');

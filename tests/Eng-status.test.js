@@ -70,13 +70,13 @@ test('Creating Engagement status update', async ({ page }) => {
     console.log('Clicked Submit button');
 
     // Verify the presence of the success element
-    const successHeading = page.locator('h4.MuiTypography-root.MuiTypography-h4.css-1qi9c73');
+    const successHeading = page.locator('//h4[text()="Every challenge is an opportunity."]');
     await expect(successHeading).toBeVisible();
     await expect(successHeading).toHaveText('Every challenge is an opportunity.');
     console.log('Verified success heading is displayed with correct text');
 
     // Verify the presence of the success message
-    const successMessage = page.locator('p.MuiTypography-root.MuiTypography-body1.css-zeb3zs');
+    const successMessage = page.locator('//p[text()="Maybe a follow-up could be the turning point. Remember, the best view comes after the hardest climb!"]');
     await expect(successMessage).toBeVisible();
     await expect(successMessage).toHaveText('Maybe a follow-up could be the turning point. Remember, the best view comes after the hardest climb!');
     console.log('Verified success message is displayed with correct text');
