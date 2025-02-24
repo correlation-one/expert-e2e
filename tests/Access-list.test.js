@@ -50,7 +50,7 @@ test('Access to the list of learners associated to my programs', async ({ page }
   // Wait for the grouping to take effect
   await page.getByText('Group by Engagement status').click();
   // Verify that "MIchael Scott" is present in the "On track" group
-  const onRiskGroup = page.locator('div[aria-labelledby="on-track-(1)-header"]');
+  const onRiskGroup = page.locator('div[aria-labelledby="at-risk-(1)-header"]');
   await expect(onRiskGroup.getByText(learner)).toBeVisible();
   console.log('Filter Group by Engagement status works as expected')
   
