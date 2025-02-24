@@ -18,8 +18,8 @@ test('Access to the list of learners associated to my programs', async ({ page }
   const postLoginTitle = await page.title();
   console.log('Page title after login:', postLoginTitle);
   console.log('Login Successful');
-  await page.getByRole('tab', { name: 'Expert Test Program' }).click();
-  console.log('Navigated to Expert Test Program tab');  
+  await page.getByRole('tab', { name: 'Grading Service Test program' }).click();
+  console.log('Navigated to Grading Service Test programm tab');  
 
   await page.getByPlaceholder('Search learner').click();
   await page.getByPlaceholder('Search learner').fill('Michael Scott');

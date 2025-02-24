@@ -31,7 +31,7 @@ test('Review learner interaction History', async ({ page }) => {
   console.log('Assertion passed: Interactions label is visible and clicked.');
 
   // Click on 'Status' inside the learner drawer
-  const statusLabel = page.getByTestId('learner-drawer').getByLabel('Status');
+  const statusLabel = page.getByLabel('Status');
   await expect(statusLabel).toBeVisible();
   await statusLabel.click();
   console.log('Assertion passed: Status label inside learner drawer is visible and clicked.');

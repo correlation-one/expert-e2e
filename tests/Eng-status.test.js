@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { login } = require('../utils/login');
 
 test('Creating Engagement status update', async ({ page }) => {
+  learner = 'gabriel.deazevedo+2@correlation-one.com'
   console.log('Starting test');
 
   // Navigate to the website
@@ -26,8 +27,8 @@ test('Creating Engagement status update', async ({ page }) => {
   // Search and select learner
   await page.getByPlaceholder('Search learner by name').click();
   await page.getByPlaceholder('Search learner by name').fill('');
-  await page.getByRole('option', { name: 'gabriel.deazevedo+2@correlation-one.com' }).click();
-  console.log('Selected learner: gabriel.deazevedo+2@correlation-one.com');
+  await page.getByRole('option', { name: learner }).click();
+  console.log(`Selected learner: ${learner}`);
 
   // Click Next
   await page.getByRole('button', { name: 'Next' }).click();
@@ -82,7 +83,7 @@ test('Creating Engagement status update', async ({ page }) => {
     console.log('Verified success message is displayed with correct text');
 
     // Verify the presence of the action buttons
-    const addMoreUpdatesButton = page.getByRole('button', { name: 'Add more updates to Engineer' });
+    const addMoreUpdatesButton = page.getByRole('button', { name: `Add more updates to ${learner}` });
     await expect(addMoreUpdatesButton).toBeVisible();
     console.log('Verified "Add more updates" button is present');
 
