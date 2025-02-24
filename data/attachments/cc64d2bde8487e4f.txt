@@ -11,8 +11,10 @@ Clicked on Add learner update button
 Selected learner: gabriel.deazevedo+2@correlation-one.com
 Proceeded to next step
 Clicked on Engagement status
-Selected status: On track
+Selected status: At risk
 Clicked Next button
 Filled text field with "Test"
 Selected "No" option
 Clicked Submit button
+Verified success heading is displayed with correct text
+Verified success message is displayed with correct text

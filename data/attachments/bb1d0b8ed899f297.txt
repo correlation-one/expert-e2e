@@ -16,3 +16,5 @@ Clicked Next button
 Filled text field with "Test"
 Selected "No" option
 Clicked Submit button
+Verified success heading is displayed with correct text
+Verified success message is displayed with correct text
