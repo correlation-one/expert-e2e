@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { login } = require('../utils/login');
 
 test('Access to the list of learners associated to my programs', async ({ page }) => {
+  const learner = 'gabriel.deazevedo+2@correlation-one.com'
   console.log('Starting test');
 
   // Navigate to the website
@@ -22,16 +23,15 @@ test('Access to the list of learners associated to my programs', async ({ page }
   console.log('Navigated to Grading Service Test programm tab');  
 
   await page.getByPlaceholder('Search learner').click();
-  await page.getByPlaceholder('Search learner').fill('Michael Scott');
-  console.log('Entered search term: Michael Scott');
-  await page.getByRole('button', { name: 'MIchael Scott' }).click();
-  console.log('Clicked on Michael Scott');   
+  await page.getByPlaceholder('Search learner').fill(learner);
+  console.log(`Entered search term: ${learner}`);
+  await page.getByRole('button', { name: learner }).click();
+  console.log(`Clicked on ${learner}`);   
   
   const nameElement = page.locator('h4.MuiTypography-root.MuiTypography-h4');
   await expect(nameElement).toBeVisible();
-  await expect(nameElement).toHaveText('MIchael Scott');
-  console.log('Verified Michael Scott\'s name is displayed correctly');
-  await page.waitForTimeout(2000);
+  await expect(nameElement).toHaveText(learner);
+  console.log(`Verified ${learner}\'s name is displayed correctly`);
 
   await page.getByLabel('Close').click();
   await page.getByPlaceholder('Search learner').click();
@@ -44,23 +44,21 @@ test('Access to the list of learners associated to my programs', async ({ page }
   console.log('Verified misspelled names DO NOT show up')
 
   await page.getByPlaceholder('Search learner').click();
-  await page.getByPlaceholder('Search learner').fill('Michael Scott');
+  await page.getByPlaceholder('Search learner').fill(learner);
 
   await page.getByLabel('Group by None').click();
   // Wait for the grouping to take effect
   await page.getByText('Group by Engagement status').click();
-  await page.waitForTimeout(3000);
   // Verify that "MIchael Scott" is present in the "On track" group
-  const onTrackGroup = page.locator('div[aria-labelledby="on-track-(1)-header"]');
-  await expect(onTrackGroup.getByText('MIchael Scott')).toBeVisible();
+  const onRiskGroup = page.locator('div[aria-labelledby="at-risk-(1)-header"]');
+  await expect(onRiskGroup.getByText(learner)).toBeVisible();
   console.log('Filter Group by Engagement status works as expected')
   
   await page.getByText('Group by Engagement status').click();
   await page.getByText('Group by Job search status').click();
-  await page.waitForTimeout(3000);
 
-  // Verify that "MIchael Scott" is present in the "Preparation" group
-  const preparationGroup = page.locator('div[aria-labelledby="preparation-(1)-header"]');
-  await expect(preparationGroup.getByText('MIchael Scott')).toBeVisible();
+  // Verify that "MIchael Scott" is present in the "interviewing" group
+  const interviewingGroup = page.locator('div[aria-labelledby="interviewing-(1)-header"]');
+  await expect(interviewingGroup.getByText(learner)).toBeVisible();
   console.log('Filter Group by Job search status works as expected');
 });
