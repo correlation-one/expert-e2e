@@ -7,5 +7,5 @@ Submit button clicked
 Navigation completed
 Page title after login: Expert Client
 Login Successful
-Assertion passed: gabriel.deazevedo+2@correlation-one.com gridcell is visible and clicked.
-Assertion passed: Interactions label is visible and clicked.
+Navigated to Grading Service Test programm tab
+Entered search term: Michael Scott
