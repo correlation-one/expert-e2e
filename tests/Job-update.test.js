@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { login } = require('../utils/login');
 
 test('Creating Job Search status update', async ({ page }) => {
+  const learner = 'gabriel.deazevedo+2@correlation-one.com'
   console.log('Starting test');
 
   // Navigate to the website
@@ -26,8 +27,8 @@ test('Creating Job Search status update', async ({ page }) => {
   // Search and select learner
   await page.getByPlaceholder('Search learner by name').click();
   await page.getByPlaceholder('Search learner by name').fill('');
-  await page.getByRole('option', { name: 'gabriel.deazevedo+2@correlation-one.com' }).click();
-  console.log('Selected learner: gabriel.deazevedo+2@correlation-one.com');
+  await page.getByRole('option', { name: learner }).click();
+  console.log(`Selected learner: ${learner}`);
 
   await page.getByRole('button', { name: 'Next' }).click();
   console.log('Clicked Next button');
@@ -35,24 +36,25 @@ test('Creating Job Search status update', async ({ page }) => {
   await page.getByRole('link', { name: 'Job search status' }).click();
   console.log('Navigated to Job search status');
 
-  // Add a wait to allow the status elements to appear
-  await page.waitForTimeout(5000);
 
   // Locate the status text on the page
-  const applyingStatus = page.locator('p:has-text("gabriel.deazevedo+2@correlation-one.com\'s current engagement status is Applying")');
-  const notLookingStatus = page.locator('p:has-text("gabriel.deazevedo+2@correlation-one.com\'s current engagement status is Not looking")');
+  const statusLocator = await page.locator(`//p[contains(text(), "${learner}")]/div/span`).textContent();
 
   // Click based on the current status
   const chipLabels = page.locator("span[class*='MuiChip-label'].css-9iedg7");
 
-  if (await applyingStatus.isVisible()) {
+  if (statusLocator == "Applying") {
     // If the status is "Applying", click the fifth element
     await chipLabels.nth(4).click();
     console.log('Current status is "Applying". Clicked on Not looking.');
-  } else if (await notLookingStatus.isVisible()) {
+  } else if (statusLocator == "Not looking") {
     // If the status is "Not looking", click the third element
     await chipLabels.nth(2).click();
     console.log('Current status is "Not looking". Clicked on Applying.');
+  } else if (statusLocator == "Preparation") {
+    // If the status is "Preapration", click the third element
+    await chipLabels.nth(2).click();
+    console.log('Current status is "Preapration". Clicked on Applying.');
   }
 
   // Click Next button
@@ -60,21 +62,26 @@ test('Creating Job Search status update', async ({ page }) => {
   await nextButton.click();
   console.log('Clicked Next button');
 
-  // Add a wait for the success message to appear
-  await page.waitForSelector('h4.MuiTypography-root.MuiTypography-h4.css-1qi9c73', { state: 'visible', timeout: 10000 });
-  console.log('Success message appeared.');
+  await page.locator('input[placeholder="Company names"]').fill('Test Company');
+  await page.locator('input[placeholder="MM/DD/YYYY"]').fill('01/01/2022');
+
+  await page.locator('//Button[text()="Submit"]').click();
+
+  // // Add a wait for the success message to appear
+  // await page.waitForSelector('h4.MuiTypography-root.MuiTypography-h4.css-1qi9c73', { state: 'visible', timeout: 10000 });
+  // console.log('Success message appeared.');
 
   // Verify the presence of the success elements
-  const successHeading = page.locator('h4.MuiTypography-root.MuiTypography-h4.css-1qi9c73');
+  const successHeading = page.locator('h4.MuiTypography-root.MuiTypography-h4');
   await expect(successHeading).toBeVisible();
   console.log('Verified success heading is displayed');
 
-  const successMessage = page.locator('p.MuiTypography-root.MuiTypography-body1.css-zeb3zs');
+  const successMessage = page.locator('p.MuiTypography-root.MuiTypography-body1').nth(2);
   await expect(successMessage).toBeVisible();
   console.log('Verified success message is displayed');
 
   // Verify the presence of the action buttons
-  const addMoreUpdatesButton = page.getByRole('button', { name: 'Add more updates to Engineer' });
+  const addMoreUpdatesButton = page.getByRole('button', { name: `Add more updates to ${learner}` });
   await expect(addMoreUpdatesButton).toBeVisible();
   console.log('Verified "Add more updates" button is present');
 

@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { login } = require('../utils/login');
 
 test('Creating Engagement status update', async ({ page }) => {
-  learner = 'gabriel.deazevedo+2@correlation-one.com'
+  const learner = 'gabriel.deazevedo+2@correlation-one.com'
   console.log('Starting test');
 
   // Navigate to the website
