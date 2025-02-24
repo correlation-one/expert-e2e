@@ -8,4 +8,7 @@ Navigation completed
 Page title after login: Expert Client
 Login Successful
 Navigated to Grading Service Test programm tab
-Entered search term: Michael Scott
+Entered search term: gabriel.deazevedo+2@correlation-one.com
+Clicked on gabriel.deazevedo+2@correlation-one.com
+Verified gabriel.deazevedo+2@correlation-one.com's name is displayed correctly
+Verified misspelled names DO NOT show up
