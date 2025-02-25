@@ -87,3 +87,35 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+
+    # Count the number of tests
+    - name: Run JavaScript script to count tests
+      id: count_tests
+      run: |
+        output=$(node count_tests.js allure-report/data/behaviors.json)
+        echo "::set-output name=passed::$(echo "$output" | awk '/Total Passed Tests:/ {print $4}')"
+        echo "::set-output name=failed::$(echo "$output" | awk '/Total Failed Tests:/ {print $4}')"
+
+    # Slack Notification
+    - name: notify slack \#automation-test-reports
+      id: slack
+      uses: slackapi/slack-github-action@v1.24.0
+            # https://api.slack.com/apps/<your-app-id>/incoming-webhooks
+      with:
+        channel-id: '#automation-test-reports' # slack channel #alerts-test
+        payload: |
+              {
+                "text": "Passback automation test results",
+                "blocks": [
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "Passback Test Automation Completed. \nPassed tests: ${{ steps.count_tests.outputs.passed }}\nFailed tests: ${{ steps.count_tests.outputs.failed }}\n To see the reports go to https://correlation-one.github.io/passback-2024/"
+                    }
+                  }
+                ]
+              }
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_NOTIFICATIONS_WEBHOOK }}
+        SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
