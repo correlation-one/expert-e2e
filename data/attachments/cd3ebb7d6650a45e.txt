@@ -12,5 +12,3 @@ Entered search term: gabriel.deazevedo+2@correlation-one.com
 Clicked on gabriel.deazevedo+2@correlation-one.com
 Verified gabriel.deazevedo+2@correlation-one.com's name is displayed correctly
 Verified misspelled names DO NOT show up
-Filter Group by Engagement status works as expected
-Filter Group by Job search status works as expected

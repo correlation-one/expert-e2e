@@ -1,0 +1,10 @@
+Starting test
+Navigated to homepage
+Title verified
+Email field filled
+Password field filled
+Submit button clicked
+Navigation completed
+Page title after login: Expert Client
+Login Successful
+Assertion passed: gabriel.deazevedo+2@correlation-one.com gridcell is visible and clicked.
