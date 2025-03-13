@@ -1,0 +1,22 @@
+Starting test
+Navigated to homepage
+Title verified
+Email field filled
+Password field filled
+Submit button clicked
+Navigation completed
+Page title after login: Expert Client
+Login Successful
+Clicked on Add learner update button
+Selected learner: gabriel.deazevedo+2@correlation-one.com
+Proceeded to next step
+Selected interaction type: Slack/Email
+Proceeded to interaction details
+Filled interaction details
+Selected interaction topic: Introduction
+Selected No for follow-up
+Verified success element is displayed with correct text
+Verified success message is displayed with correct text
+Verified "Add more updates" button is present
+Verified "Start a new learner update" button is present
+Test completed successfully
