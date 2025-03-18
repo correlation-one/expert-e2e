@@ -10,6 +10,6 @@ Login Successful
 Clicked on Add learner update button
 Selected learner: gabriel.deazevedo+2@correlation-one.com
 Proceeded to next step
-Filled textbox with generated LinkedIn link: https://www.linkedin.com/in/csmg230i-test-kxz2je06/
+Filled textbox with generated LinkedIn link: https://www.linkedin.com/in/6gsgmtlc-test-goip1zbr/
 Assertion passed: The correct link was filled in the textbox.
 Clicked Save button
